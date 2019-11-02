@@ -53,7 +53,7 @@
 
 <div class="col-md-4 col-sm-12 col-xs-12 cover">
 <div class="card">
-  <img src="img/hotel.jpg" alt="Avatar" style="width:100%">
+  <img src="" alt="Avatar" style="width:100%">
   <div class="container">
     <h4><b>Sea Resort</b></h4> 
     <p>Deluxe Rooms</p> 
