@@ -15,3 +15,4 @@
 
 Route::get('/', 'RoomsController@index');
 Route::get('/search', 'RoomsController@getSearch');
+Route::post('/search', 'SearchController@postSearch');
