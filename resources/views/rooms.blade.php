@@ -21,66 +21,24 @@
 
 <h3>Room Details</h3>
 <div class="row">
+@foreach($roomlist as $listData)
 <div class="col-md-4 col-sm-12 col-xs-12 cover">
 <div class="card">
   <img src="img/hotel.jpg" alt="Avatar" style="width:100%">
   <div class="container">
-    <h4><b>Sea Resort</b></h4> 
+    <h4><b>{{ $listData->room_title}}</b></h4> 
     <p>Deluxe Rooms</p> 
-	<p>Price $500</p> 
+	<p>Price ${{ $listData->price}}</p> 
 	<p>Rating 4.1</p> 
 	<p>Discount 10%</p> 
-	<p>Discount price $250</p>
+	<p>Discount price ${{ $listData->discount}}</p>
 	<button>Book</button> 
   </div>
   </div>
 </div>
+@endforeach
 
-<div class="col-md-4 col-sm-12 col-xs-12 cover">
-<div class="card">
-  <img src="img/hotel.jpg" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>Sea Resort</b></h4> 
-    <p>Deluxe Rooms</p> 
-	<p>Price $500</p> 
-	<p>Rating 4.1</p> 
-	<p>Discount 10%</p> 
-	<p>Discount price $250</p>
-	<button>Book</button> 
-  </div>
-  </div>
-</div>
 
-<div class="col-md-4 col-sm-12 col-xs-12 cover">
-<div class="card">
-  <img src="" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>Sea Resort</b></h4> 
-    <p>Deluxe Rooms</p> 
-	<p>Price $500</p> 
-	<p>Rating 4.1</p> 
-	<p>Discount 10%</p> 
-	<p>Discount price $250</p>
-	<button>Book</button> 
-  </div>
-  </div>
-</div>
-
-<div class="col-md-4 col-sm-12 col-xs-12 cover">
-<div class="card">
-  <img src="img/hotel.jpg" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>Sea Resort</b></h4> 
-    <p>Deluxe Rooms</p> 
-	<p>Price $500</p> 
-	<p>Rating 4.1</p> 
-	<p>Discount 10%</p> 
-	<p>Discount price $250</p>
-	<button>Book</button> 
-  </div>
-  </div>
-</div>
-</div>
 </div>
 
 <style>
