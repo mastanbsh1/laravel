@@ -83,12 +83,13 @@
 <h3>Room Details</h3>
 
 <div class="row">
-foreach ($search as $items){ 
+foreach ($result as $items){ 
 	
-
+	  {{$items}}
 <div class="col-md-4 col-sm-12 col-xs-12 cover">
 <div class="card">
   <img src="{{$items->image}}" alt="Avatar" style="width:100%">
+
   <div class="container">
     <h4><b>{{$items->room_title}}</b></h4> 
     <p>Deluxe Rooms</p> 
