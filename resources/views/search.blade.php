@@ -21,8 +21,8 @@
 
 <h3>Search</h3>
 <div class="row">
-<form action="{{ url('/search')}}" method="POST">
-	{{ csrf_token() }}
+<form action="/search" method="POST">
+	@csrf
   <div class="row">
   <div class="col-md-4 col-sm-6 col-xs-12 col-12">
 	<div class="inpadding">
@@ -37,7 +37,12 @@
 	 <div class="col-md-4 col-sm-6 col-xs-12 col-12">
    
 	<div class="inpadding">
-    <input type="text" placeholder="Enter Location" name="uname" class="form-control">
+	<select class="form-control" name="uname">
+  <option value="1">Chennai</option>
+  <option value="2">Kodaikanal</option>
+  
+</select>
+    
 	</div>
 	</div>
 	 <div class="col-md-4 col-sm-6 col-xs-12 col-12">
@@ -51,7 +56,12 @@
 	<div class="col-md-4 col-sm-6 col-xs-12 col-12">
    
 	<div class="inpadding">
-    <input type="text" placeholder="Enter Room Type" name="roomtype" class="form-control">
+	<select class="form-control" name="roomtype">
+  <option value="1">Family</option>
+  <option value="2">Single</option>
+  <option value="3">Double</option>
+  </select>
+   
 	</div>
 	</div>
 	
@@ -64,9 +74,35 @@
 </div>
 </div>  
 </form> 
-</div>
-</div>
 
+
+</div>
+</div>
+<div class="container">
+
+<h3>Room Details</h3>
+
+<div class="row">
+foreach ($search as $items){ 
+	
+
+<div class="col-md-4 col-sm-12 col-xs-12 cover">
+<div class="card">
+  <img src="{{$items->image}}" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>{{$items->room_title}}</b></h4> 
+    <p>Deluxe Rooms</p> 
+	<p>Price ${{$items->price}}</p> 
+	<p>Rating 4.1</p> 
+	<p>Discount {{$items->discount}}</p> 
+	<p>Discount price ${{$items->dis_price}}</p>
+	<button>Book</button> 
+  </div>
+  </div>
+</div>
+}
+</div>
+</div>
 <style>
 body{
 overflow-x:hidden;
